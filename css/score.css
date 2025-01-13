@@ -1,4 +1,46 @@
+body {
+  margin:0;
+  overflow:hidden;
+}
+
+#rotationWrapper {
+  transform: rotate(90deg);
+  transform-origin:bottom left;
+    
+  position:absolute;
+  top: -100vw;
+  left: 0;
+  
+  height:100vw;
+  width:100vh;
+
+  overflow:auto;
+}
+
 .container {
-  max-width: 
-    800px; 
+  max-width: 800px; 
+  z-index: 1;
+  padding-top:30vw;
+
+  /* click through visible div to elements behind it*/
+  pointer-events: none; 
+}
+
+#btn_reset {
+  visibility: hidden;
+}
+
+#buttons {
+  position: absolute;
+  z-index: 0;
+}
+
+#btn_p1Up, #btn_p2Up, #btn_p1Down, #btn_p2Down {
+  width: 48vh;
+  height: 46vw;
+}
+
+#p1Score, #p2Score {
+  font-size: 68pt;
+  padding-left: 16vh;
 }
