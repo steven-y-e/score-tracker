@@ -30,16 +30,6 @@ body {
   padding: 1vw;
 }
 
-#scores {
-  width: 100%;
-  z-index: 4;
-  padding-top:25vw;
-  color: #268bd2;
-
-  /* click through visible div to elements behind it*/
-  pointer-events: none; 
-}
-
 #buttons {
   position: absolute;
   z-index: 1;
@@ -74,8 +64,17 @@ input[type="button"] {
   color: transparent;
 }
 
+#scores {
+  width: 100%;
+  z-index: 4;
+  padding-top:19vw;
+
+  /* click through visible div to elements behind it*/
+  pointer-events: none; 
+}
+
 .score {
-  font-size: 68pt;
+  font-size: 96pt;
 }
 
 #p1Score {
