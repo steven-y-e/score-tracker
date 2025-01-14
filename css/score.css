@@ -1,6 +1,9 @@
 body {
   margin: 0;
   overflow: hidden;
+  background-color: #002b36;
+  /* disable touch gestures */
+  touch-action: none;
 }
 
 #rotationWrapper {
@@ -12,20 +15,29 @@ body {
   height: 100vw;
   width: 100vh;
   overflow: auto;
+}
 
+#container {
+  margin: 1vw;
+  padding: 1vw;
+}
+
+.half {
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+  margin: 1vw;
+  padding: 1vw;
 }
 
 #scores {
-  max-width: 800px; 
+  width: 100%;
   z-index: 4;
-  padding-top:30vw;
+  padding-top:25vw;
+  color: #268bd2;
 
   /* click through visible div to elements behind it*/
   pointer-events: none; 
-}
-
-#btn_reset {
-  visibility: hidden;
 }
 
 #buttons {
@@ -38,7 +50,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #000;
+  color: #fdf6e3;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -48,26 +60,32 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #33C3F0;
+  border: none;
   cursor: pointer;
   box-sizing: border-box; 
   background-color: transparent;
   box-sizing: border-box; 
 }
-.button:hover,
-input[type="button"]:hover,
-.button:focus,
-input[type="button"]:focus {
-  border-color: #1EAEDB; 
-}
 
 #btn_p1Up, #btn_p2Up, #btn_p1Down, #btn_p2Down {
   width: 48vh;
   height: 46vw;
+
+  color: transparent;
 }
 
-#p1Score, #p2Score {
+.score {
   font-size: 68pt;
-  padding-left: 16vh;
+}
+
+#p1Score {
+  color: #d33682;
+}
+
+#p2Score {
+  color: #2aa198;
+}
+
+#btn_reset {
+  visibility: hidden;
 }

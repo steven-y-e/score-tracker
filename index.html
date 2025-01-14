@@ -16,26 +16,37 @@
 	<script src="js/life.js"></script>
 </head>
 <body><div id="rotationWrapper">
-	<div id="buttons">
+	<div id="container">
+		<div id="buttons">
+			<div class="half">
+				<input class="button" type="button" 
+					value="1p &uarr;" 
+					id="btn_p1Up" />
+				<input class="button" type="button" 
+					value="1p &darr;" 
+					id="btn_p1Down" />
+			</div>
+			<div class="half">
+				<input class="button" type="button" 
+					value="2p &uarr;" 
+					id="btn_p2Up" />
+				<input class="button" type="button" 
+					value="2p &darr;" 
+					id="btn_p2Down" />
+			</div>
+		</div>
+		<div id="scores">
+			<div class="half">
+				<span class="score" id="p1Score">20</span>
+			</div>
+			<div class="half">
+				<span class="score" id="p2Score">20</span>
+			</div>
+		</div>
 		<input class="button" type="button" 
-			value="1p &uarr;" 
-			id="btn_p1Up" />
-		<input class="button" type="button" 
-			value="2p &uarr;" 
-			id="btn_p2Up" />
-		<input class="button" type="button" 
-			value="1p &darr;" 
-			id="btn_p1Down" />
-		<input class="button" type="button" 
-			value="2p &darr;" 
-			id="btn_p2Down" />
+			value="reset" 
+			id="btn_reset"
+			/>
 	</div>
-	<div id="scores">
-		<span id="p1Score">20</span>
-		<span id="p2Score">20</span>
-	</div>
-	<input class="button" type="button" 
-		value="reset" 
-		id="btn_reset" />
 </div></body>
 </html>
