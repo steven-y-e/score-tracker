@@ -1,20 +1,18 @@
 body {
-  margin:0;
-  overflow:hidden;
+  margin: 0;
+  overflow: hidden;
 }
 
 #rotationWrapper {
   transform: rotate(90deg);
-  transform-origin:bottom left;
-    
-  position:absolute;
+  transform-origin: bottom left;
+  position: absolute;
   top: -100vw;
   left: 0;
-  
-  height:100vw;
-  width:100vh;
+  height: 100vw;
+  width: 100vh;
+  overflow: auto;
 
-  overflow:auto;
 }
 
 #scores {
