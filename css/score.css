@@ -87,5 +87,11 @@ input[type="button"] {
 }
 
 #btn_reset {
-  visibility: hidden;
+  position: absolute;
+  display: block;
+  padding: 1vh;
+  margin: 80vw 44vh;
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
 }
