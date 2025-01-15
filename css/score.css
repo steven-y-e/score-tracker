@@ -67,7 +67,8 @@ input[type="button"] {
 #scores {
   width: 100%;
   z-index: 4;
-  padding-top:19vw;
+  margin-top: 25vw;
+  margin-bottom: 25vw;
 
   /* click through visible div to elements behind it*/
   pointer-events: none; 
