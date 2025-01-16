@@ -4,6 +4,7 @@ body {
   background-color: #002b36;
   /* disable touch gestures */
   touch-action: none;
+  font-family: Futura, Helvetica, Arial, sans-serif
 }
 
 #rotationWrapper {
@@ -86,6 +87,7 @@ input[type="button"] {
 }
 
 #btn_reset {
+  font-size: 24pt;
   position: absolute;
   display: block;
   padding: 1vh;
