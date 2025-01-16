@@ -96,3 +96,20 @@ input[type="button"] {
   height: 10vh;
   z-index: 4;
 }
+
+#menu {
+  height: max-content;
+  visibility: hidden;
+  background-color: rgba(0,0,0,0.5);
+  width: 100vh;
+  height: 100vw;
+  padding: 1vw;
+  position: absolute;
+  z-index: 5;
+}
+
+#btn_cancel, #btn_resetConfirm {
+  font-size: 24pt;
+  width: 48vh;
+  height: 90vw;
+}

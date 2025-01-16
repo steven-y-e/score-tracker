@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         'P2Up', 
         'P2Down', 
         'Reset', 
-//      'ResetCancel', 
-//      'ResetConfirm'
+        'ResetCancel', 
+        'ResetConfirm'
     ];
     
     const text_p1Score = document.querySelector('#p1Score');
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const btn_p2Up = document.querySelector('#btn_p2Up');
     const btn_p2Down = document.querySelector('#btn_p2Down');
     const btn_reset = document.querySelector('#btn_reset');
+    const menu = document.querySelector('#menu');
 
     btn_p1Up.addEventListener("click", () => {
         buttonPress(buttons[0])
@@ -40,6 +41,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     btn_reset.addEventListener("click", () => {
         buttonPress(buttons[4])
     });
+    
+    btn_cancel.addEventListener("click", () => {
+        buttonPress(buttons[5])
+    });
+    
+    btn_resetConfirm.addEventListener("click", () => {
+        buttonPress(buttons[6])
+    });
 
     let player1Score = mtg;
     let player2Score = mtg;
@@ -47,35 +56,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
     function buttonPress(button){
         if (button == buttons[0]) { // P1Up
             player1Score += 1;
-
         }
+
         if (button == buttons[1]) { // P1Down
             player1Score -= 1;
-
         }
+
         if (button == buttons[2]) { // P2Up
             player2Score += 1;
-
         }
+
         if (button == buttons[3]) { // P2Down
             player2Score -= 1;
-
         }
+
         if (button == buttons[4]) { // Reset
+            openResetMenu();
+        }
+
+        if (button == buttons[5]) { // ResetCancel
+            closeResetMenu();
+        }
+
+        if (button == buttons[6]) { // ResetConfirm
             player1Score = mtg;
             player2Score = mtg;
-
+            closeResetMenu();
         }
-        /*
-        if (button == buttons[5]) { // ResetCancel
 
-        }
-        if (button == buttons[6]) { // ResetConfirm
-
-        }
-        */
         text_p1Score.innerHTML = player1Score;
         text_p2Score.innerHTML = player2Score;
+    }
+
+    function openResetMenu(){
+        menu.style.visibility = "visible";
+        btn_reset.style.visibility = "hidden";
+    }
+    
+    function closeResetMenu(){
+        menu.style.visibility = "hidden";
+        btn_reset.style.visibility = "visible";
     }
 });
 
